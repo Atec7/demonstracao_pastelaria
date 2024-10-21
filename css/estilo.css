@@ -1,0 +1,233 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background-color: rgb(170, 25, 25);
+    color: white ;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+
+}
+.products, .cart {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.855);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.products .product {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product p {
+    font-size: 1em;
+    color: #333;
+}
+
+button {
+    background-color:rgb(170, 25, 25);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.cart h2 {
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart p {
+    font-weight: bold;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+#delivery-info {
+    margin-top: 10px;
+}
+
+#delivery-info label {
+    margin: 5px 0;
+}
+
+#delivery-info input[type="text"] {
+    color: rgb(170, 25, 25);
+    font-size: 16px;
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold; /* Define o texto como negrito */
+    text-transform: uppercase;
+}
+
+fieldset {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    font-weight: bold;
+}
+
+.additional {
+    margin-right: 10px;
+    text-align: left;
+}
+.logo{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.copyright{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(3, 3, 87);
+}
+.produto{
+    width: 350px;
+    border-style: solid;
+    border-color: rgb(170, 25, 25);
+    border-radius: 26px;
+    text-align: center;
+}
+.atenção{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: yellow;
+
+}
+.Pagamento {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+}
+/* Estilizar o contêiner do select */
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    appearance: none; /* Remove as setas padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+}
+
+/* Adicionar uma seta personalizada */
+.custom-select::after {
+    content: '▼';
+    font-size: 12px;
+    color: #888;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Estilizar as opções do select */
+.custom-select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #444;
+}
+/* Estilos para a barra de pesquisa */
+#searchBar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid RED;
+    border-radius: 17px;
+    font-size: 16px;
+    color: rgb(170, 25, 25);
+    font-weight: bold; /* Define o texto como negrito */
+    padding: 10px;
+}
+
+/* ESTILOS PARA O FOOTER */
+.atec{
+    text-decoration: none;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    width: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(3, 3, 87);
+}
+:hover .logo{
+    background-color: white;
+    cursor: pointer;
+}
+.pedido{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(170, 25, 25);
+}
+.success-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 16px;
+}

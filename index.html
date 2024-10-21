@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>WWW.BORCELEPASTELARIA.COM.BR</title>
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        <header>
+            <img class="logo" src="img/logo.png" width="150px" alt="">
+            <h1>Borcelle Pastelaria</h1>
+            <input class="pesquisa" type="text" id="searchBar" placeholder="Encontre mais rápido..." onkeyup="searchProducts()">
+        </header>
+    </header>
+
+ <!-- ABAIXO É CAMPO DE PRODUTO -->
+
+ <section class="products">
+    <div class="product" data-name="Pastel Pequeno - (item promocional)" data-price="10">
+        <h2>Pastel Pequeno - (item promocional) </h2>
+        <img class="produto" src="img/pastel1.png" alt="">
+        <P>Delicie-se com a combinação perfeita de ingredientes que 
+        fazem do nosso pastel de carne uma verdadeira iguaria. 
+        Aqui estão os detalhes dos ingredientes que trazem sabor e qualidade a cada mordida:</P>
+        <p>R$10.00</p>
+        <label for="quantity-small1">Quantidade:</label>
+        <input type="number" id="quantity-small1" name="quantity-small1" min="1" value="1">
+        <fieldset>
+            <legend>Adicionais:</legend>
+            <label><input type="checkbox" class="additional" value="5" data-name="4 Queijos"> 4 Queijos (+R$5.00)</label><br>
+            <label><input type="checkbox" class="additional" value="3" data-name="Molho Especial"> Molho Especial (+R$3.00)</label><br>
+            <label><input type="checkbox" class="additional" value="4" data-name="Catupiry"> Catupiry (+R$4.00)</label>
+        </fieldset>
+        <button onclick="addToCart('Pastel Pequeno - (item promocional)', 10, 'quantity-small1', this)">Adicionar ao Carrinho</button>
+    </div>
+     
+    <div class="product" data-name="Pastel Médio - (item promocional)" data-price="13">
+        <h2>Pastel Médio - (item promocional) </h2>
+        <img class="produto" src="img/pastel2.png" alt="">
+        <P>Delicie-se com a combinação perfeita de ingredientes que 
+        fazem do nosso pastel de carne uma verdadeira iguaria. 
+        Aqui estão os detalhes dos ingredientes que trazem sabor e qualidade a cada mordida:</P>
+        <p>R$13.00</p>
+        <label for="quantity-small2">Quantidade:</label>
+        <input type="number" id="quantity-small2" name="quantity-small2" min="1" value="1">
+        <fieldset>
+            <legend>Adicionais:</legend>
+            <label><input type="checkbox" class="additional" value="5" data-name="4 Queijos"> 4 Queijos (+R$5.00)</label><br>
+            <label><input type="checkbox" class="additional" value="3" data-name="Molho Especial"> Molho Especial (+R$3.00)</label><br>
+            <label><input type="checkbox" class="additional" value="4" data-name="Catupiry"> Catupiry (+R$4.00)</label>
+        </fieldset>
+        <button onclick="addToCart('Pastel Médio - (item promocional)', 13, 'quantity-small2', this)">Adicionar ao Carrinho</button>
+    </div>
+     
+    <div class="product" data-name="Pastel Grande - (item promocional) " data-price="15">
+        <h2>Pastel Grande - (item promocional) </h2>
+        <img class="produto" src="img/pastel3.png" alt="">
+        <P>Delicie-se com a combinação perfeita de ingredientes que 
+        fazem do nosso pastel de carne uma verdadeira iguaria. 
+        Aqui estão os detalhes dos ingredientes que trazem sabor e qualidade a cada mordida:</P>
+        <p>R$15.00</p>
+        <label for="quantity-small3">Quantidade:</label>
+        <input type="number" id="quantity-small3" name="quantity-small3" min="1" value="1">
+        <fieldset>
+            <legend>Adicionais:</legend>
+            <label><input type="checkbox" class="additional" value="5" data-name="4 Queijos"> 4 Queijos (+R$5.00)</label><br>
+            <label><input type="checkbox" class="additional" value="3" data-name="Molho Especial"> Molho Especial (+R$3.00)</label><br>
+            <label><input type="checkbox" class="additional" value="4" data-name="Catupiry"> Catupiry (+R$4.00)</label>
+        </fieldset>
+        <button onclick="addToCart('Pastel Grande - (item promocional)', 15, 'quantity-small3', this)">Adicionar ao Carrinho</button>
+    </div>
+</section>
+
+
+    <section class="cart">
+        <img class="elemento" src="img/pix.png" width="90px" alt="">
+        <img class="elemento" src="img/cartão.png" width="90px" alt="">
+        <img class="elemento" src="img/dinheiro.png" width="90px" alt="">
+        <h2>Pedido</h2>
+        <img class="pedido" src="img/logo.png" width="50px" alt="">
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: R$0.00</p>
+        <label>
+            <input type="radio" name="delivery" value="retirada" checked> Retirada na Loja
+        </label>
+        <label>
+            <input type="radio" name="delivery" value="entrega"> Entrega (Taxa: R$10.00)
+        </label>
+        <div id="delivery-info" style="display: none;">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label class="delivery" for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento" name="pagamento" class="custom-select">
+            <option class="PIX" value="PIX">PIX</option>
+            <option value="CARTÃO">CARTÃO</option>
+            <option value="DINHEIRO">DINHEIRO</option>
+            <option value="CARTÃO ALIMENTAÇÃO">CARTÃO ALIMENTAÇÃO</option>
+            </select>
+
+
+            <p>Nossos Entregadores realizam as entregas normalmente em torno de 1 Horas, 
+            caso esteja tendo dificuldades com a entrega, por favor clique na Opção de <a href="https://api.whatsapp.com/send/?phone=5564992952748&text=Ol%C3%A1%2C+Tudo+bem%3F+fiz+o+pedido+pelo+site%2C+e+faz+mais+de+1+hora+que+estou+esperando+o+meu+pedido%2C+pode+me+ajudar+por+favor%3F&type=phone_number&app_absent=0"> Problemas com a minha Entrega.</a> </p> 
+        </div>
+        <button onclick="sendCartToWhatsApp()">Finalizar Compra</button>
+    </section>
+
+    <a href="https://api.whatsapp.com/send/?phone
+    =5564992952748&text=Ol%C3%A1%2C+Tudo+bem%3F+fiz+o+pedido+pelo+
+    site%2C+e+faz+mais+de+1+hora+que+estou+esperando+o+meu+pedido%2C+pod
+    e+me+ajudar+por+favor%3F&type=phone_number&app_absent=0">
+        <img class="atenção" src="img/atenção.png" width="150px" height="150px" alt="">
+    </a>
+    <img class="atec" src="img/atec.logo.jpg" width="30px" alt="">
+    <a class="copyright" href="https://atec7.github.io/atecseven.com.br/">AtecSeven Tecnologia</a>
+    <p class="copyright"> copyright © 2019. Todos os direitos reservados.</p>
+    <script src="js/script.js"></script>
+</body>
+</html>
